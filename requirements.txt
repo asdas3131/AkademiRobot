@@ -8,3 +8,6 @@ pytz
 colorama
 rich
 python-dotenv
+beautifulsoup4
+lxml
+tabulate
