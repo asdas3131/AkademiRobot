@@ -1,6 +1,6 @@
 # 🤖 AkademiRobot
 
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/ef21dc5020ff4c1690ef9d0e847c67c0)](https://www.codacy.com/gh/keyiflerolsun/AkademiRobot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=keyiflerolsun/AkademiRobot&amp;utm_campaign=Badge_Grade) ![Repo Boyutu](https://img.shields.io/github/repo-size/keyiflerolsun/AkademiRobot) ![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/keyiflerolsun/AkademiRobot&title=Profile%20Views) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/keyiflerolsun/AkademiRobot)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/bbf22d71d8084419b510d8904f9f30bd)](https://www.codacy.com/gh/keyiflerolsun/AkademiRobot/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=keyiflerolsun/AkademiRobot&amp;utm_campaign=Badge_Grade) ![Repo Boyutu](https://img.shields.io/github/repo-size/keyiflerolsun/AkademiRobot) ![Views](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https://github.com/keyiflerolsun/AkademiRobot&title=Profile%20Views) [![Gitpod ready-to-code](https://img.shields.io/badge/Gitpod-ready--to--code-blue?logo=gitpod)](https://gitpod.io/#https://github.com/keyiflerolsun/AkademiRobot)
 
 [kekikRobot](https://github.com/KekikAkademi/kekikRobot) *tabanı kullanılarak oluşturulmuş* **Robot..**
 
