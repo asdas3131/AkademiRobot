@@ -9,7 +9,7 @@
 
 ## :rocket: Deploy Edin
 
-### HEROKU ie Deploy Edin
+### HEROKU ile Deploy Edin
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/keyiflerolsun/AkademiRobot)
 

@@ -1,5 +1,5 @@
 {
-    "name": "kekikRobot",
+    "name": "AkademiRobot",
     "description": "KekikAkademi için PyroGram Robot",
     "logo": "https://i.imgur.com/dTxK1zA.jpg",
     "keywords": [
@@ -10,7 +10,7 @@
       "keyiflerolsun",
       "kekikRobot"
     ],
-    "repository": "https://github.com/KekikAkademi/kekikRobot",
+    "repository": "https://github.com/keyiflerolsun/AkademiRobot",
     "success_url": "https://t.me/KekikAkademi",
     "website": "https://www.kekikakademi.org/",
     "env": {
