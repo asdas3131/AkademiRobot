@@ -11,3 +11,6 @@ python-dotenv
 beautifulsoup4
 lxml
 tabulate
+wget
+youtube_dl
+Pillow
