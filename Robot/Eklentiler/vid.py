@@ -64,36 +64,33 @@ async def vid(client, message):
         return
 
     simdiki_zaman = time.time()
-    try:
-        if len(message.command) > 0 and message.command[1] == 'mp3':
-            yt_baslik, yt_resim, inen_veri, ilk_mesaj = await ytdl_indirici(ilk_mesaj, verilen_link, parametre='mp3')
-            indirdim_kanka = await client.send_audio(
-                chat_id             = message.chat.id,
-                audio               = inen_veri,
-                caption             = f"{kullanici_adi}\n\n\t`{SESSION_ADI}` aracılığıyla __indirdim kankam..__\n\n**{yt_baslik}**",
-                title               = yt_baslik,
-                performer           = SESSION_ADI,
-                thumb               = yt_resim,
-                progress            = pyro_progress,
-                progress_args       = (f"__{yt_baslik}__\n\n**Yüklüyorum kankamm...**", ilk_mesaj, simdiki_zaman),
-                reply_to_message_id = yanitlanacak_mesaj
-            )
-    except IndexError:
-        pass
-
-    yt_baslik, yt_resim, inen_veri, ilk_mesaj = await ytdl_indirici(ilk_mesaj, verilen_link)
-    indirdim_kanka = await client.send_video(
-        chat_id             = message.chat.id,
-        video               = inen_veri,
-        caption             = f"{kullanici_adi}\n\n\t`{SESSION_ADI}` aracılığıyla __indirdim kankam..__\n\n**{yt_baslik}**",
-        thumb               = yt_resim,
-        progress            = pyro_progress,
-        progress_args       = (f"__{yt_baslik}__\n\n**Yüklüyorum kankamm...**", ilk_mesaj, simdiki_zaman),
-        reply_to_message_id = yanitlanacak_mesaj
-    )
+    if (len(message.command) > 0) and (message.command[1] == 'mp3'):
+        yt_baslik, yt_resim, inen_veri, ilk_mesaj = await ytdl_indirici(ilk_mesaj, verilen_link, parametre='mp3')
+        indirdim_kanka = await client.send_audio(
+            chat_id             = message.chat.id,
+            audio               = inen_veri,
+            caption             = f"{kullanici_adi}\n\n\t`{SESSION_ADI}` aracılığıyla __indirdim kankam..__\n\n**{yt_baslik}**",
+            title               = yt_baslik,
+            performer           = SESSION_ADI,
+            thumb               = yt_resim,
+            progress            = pyro_progress,
+            progress_args       = (f"__{yt_baslik}__\n\n**Yüklüyorum kankamm...**", ilk_mesaj, simdiki_zaman),
+            reply_to_message_id = yanitlanacak_mesaj
+        )
+    else:
+        yt_baslik, yt_resim, inen_veri, ilk_mesaj = await ytdl_indirici(ilk_mesaj, verilen_link)
+        indirdim_kanka = await client.send_video(
+            chat_id             = message.chat.id,
+            video               = inen_veri,
+            caption             = f"{kullanici_adi}\n\n\t`{SESSION_ADI}` aracılığıyla __indirdim kankam..__\n\n**{yt_baslik}**",
+            thumb               = yt_resim,
+            progress            = pyro_progress,
+            progress_args       = (f"__{yt_baslik}__\n\n**Yüklüyorum kankamm...**", ilk_mesaj, simdiki_zaman),
+            reply_to_message_id = yanitlanacak_mesaj
+        )
 
 
-    if cevaplanan_mesaj.via_bot:
+    if (cevaplanan_mesaj) and (cevaplanan_mesaj.via_bot):
         await cevaplanan_mesaj.delete()
 
     print('\n')
