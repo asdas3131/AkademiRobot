@@ -40,28 +40,23 @@ def nobetci_eczane(il=None, ilce=None, cikti='gorsel_veri'):
     # print(istek.headers)
 
     corba = BeautifulSoup(istek.content, "lxml")
-
-    eczane_adi = []
-    eczane_adresi = []
-    eczane_telefonu = []
-
-    for tablo in corba.find('table', class_='table table-striped mt-2'):
-        for ad in tablo.findAll('span', class_='isim'):
-            eczane_adi.append(ad.text)
-
-        for adres in tablo.findAll('span', class_='text-capitalize'):
-            eczane_adresi.append(adres.text)
-
-        for telefon in tablo.findAll('div', class_='col-lg-3 py-lg-2'):
-            eczane_telefonu.append(telefon.text)
+    bugun = corba.find('div', id='nav-bugun')
 
     liste = []
-    for adet in range(len(eczane_adi)):
-        sozluk = {}
-        sozluk['eczane_adi'] = eczane_adi[adet]
-        sozluk['eczane_adresi'] = eczane_adresi[adet]
-        sozluk['eczane_telefonu'] = eczane_telefonu[adet]
-        liste.append(sozluk)
+    for bak in bugun.findAll('tr')[1:]:
+        ad    = bak.find('span', class_='isim').text
+        mah   = None if bak.find('div', class_='my-2') == None else bak.find('div', class_='my-2').text
+        adres = bak.find('span', class_='text-capitalize').text
+        tarif = None if bak.find('span', class_='text-secondary font-italic') == None else bak.find('span', class_='text-secondary font-italic').text
+        telf  = bak.find('div', class_='col-lg-3 py-lg-2').text
+
+        liste.append({
+            'ad'        : ad,
+            'mahalle'   : mah,
+            'adres'     : adres,
+            'tarif'     : tarif,
+            'telefon'   : telf
+        })
 
     basliklar = [anahtar for anahtar in liste[0].keys()]
 
