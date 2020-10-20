@@ -11,7 +11,7 @@
 
 ### HEROKU ile Deploy Edin
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/keyiflerolsun/AkademiRobot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/keyiflerolsun/KekikRobot)
 
 ### Elle Deploy Edin
 
